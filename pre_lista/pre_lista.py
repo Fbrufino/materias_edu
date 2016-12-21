@@ -1,6 +1,8 @@
 import pandas as pd, os
 
-lista = pd.read_csv('~/Bulk/Scripts/gedae/cata_materias/201701.csv')
+# Working directory is taken as project's root (still need to check if os.path is necessary)
+
+lista = pd.read_csv('materias_edu/ground/201701.csv')
 
 inter = pd.concat([
     pd.Series(lista['inicio'].str.split(':').apply(lambda x: int(x[0])*60 + int(x[1]) - 240),name='HR_INI'),
@@ -38,5 +40,5 @@ lista.reset_index(inplace=True)
 
 lista.columns
 
-lista.to_json('/media/fernando/Bulk/Scripts/gedae/cata_materias/lista.js','records')
-os.system("sed -i '1s/^/var lista = /' lista.js")
+lista.to_json('materias_edu/lista.js','records')
+os.system("sed -i '1s/^/var lista = /' materias_edu/lista.js")
