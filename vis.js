@@ -28,7 +28,7 @@ $.fn.dataTable.ext.search.push(
     });
 
 function format ( d ) {
-    return '<table cellpadding="5" cellspacing="0" border="0" class="sub" style="padding-left:50px;font-size:80%">'+
+    return '<table cellpadding="5" cellspacing="0" border="0" class="sub" style="padding-right:7.5%;padding-left:7.5%;font-size:80%">'+
 	'<tr>'+
 	    '<td colspan="3" style="text-align:center"><b>Departamento de '+d.departamento+'</b></td>'+
 	'</tr>'+
@@ -60,7 +60,7 @@ $(document).ready(function() {
 	    { data: "aula1_professor", "visible": false } 
 	],
 	"columnDefs": [
-	    { className: "dt-body-center", "targets": [1,3] }
+	    { className: "dt-body-center", "targets": [1,2,3] }
 	]
     } );
 

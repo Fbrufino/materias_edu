@@ -24,11 +24,3 @@ class Aula(scrapy.Item):
 
 #ofer = scrapy.Field()
 #optativa = scrapy.Field()
-
-class Biblio(scrapy.Item):
-    unidade = scrapy.Field()
-    departamento = scrapy.Field()
-    sigla = scrapy.Field()
-    titulo = scrapy.Field()
-    link = scrapy.Field()
-    bib = scrapy.Field()
