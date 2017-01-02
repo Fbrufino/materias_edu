@@ -393,3 +393,6 @@ body {
     text-align: center;
     cursor: pointer
 }
+input {
+    font-size:100%
+}
