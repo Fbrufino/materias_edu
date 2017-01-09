@@ -10,10 +10,10 @@
     </head>
     <body>
 	<div id="guia_wrapper" style="max-width:800px;margin:auto">
-	    <h1 style="text-align:center">Guia de Aulas sobre Educação na USP</h1>
+	    <h1 style="text-align:center">Guia de Aulas sobre Educação na USP<span style="font-size:30%">[beta]</span></h1>
 	    <h2 style="text-align:center">1º Semestre, 2017</h2>
 	    <p style="text-align:center;margin-top:4em;margin-bottom:6em;font-size:110%">
-		Na Universidade de São Paulo, é possível acompanhar disciplinas ofertadas em seus campi como ouvinte. Na intenção de aproximar essa oportunidade e os interessados em Educação e temas afins, reorganizamos dados publicados pela própria universidade. Nesta página, alunos que tenham uma vaga em sua grade horária ou mesmo não-alunos que se interessem pelas aulas podem não só acessar a relação de turmas, mas filtrá-las por horário, professor, etc. Assim, quem, por exemplo, tiver aulas na sexta à tarde, mas quiser aproveitar a viagem para ter outra aula de manhã; quiser saber quais disciplinas aquele docente favorito está lecionando; ou simplesmente quiser ter um rápido panorama das matérias e seus conteúdos tem uma alternativa adicional às funcionalidades já disponíveis no sistema oficial da universidade, o JúpiterWeb.
+		Na Universidade de São Paulo, é possível acompanhar disciplinas ofertadas em seus campi como ouvinte. Na intenção de aproximar essa oportunidade e os interessados em Educação e temas afins, reorganizamos aqui dados publicados pela própria universidade. Nesta página, alunos que tenham uma vaga em sua grade horária ou mesmo não-alunos que se interessem pelas aulas podem não só acessar a relação de turmas, mas filtrá-las por horário, professor, etc. Assim, quem, por exemplo, tiver aulas na sexta à tarde, mas quiser aproveitar a viagem para ter outra aula de manhã; quiser saber quais disciplinas aquele docente favorito está lecionando; ou simplesmente quiser ter um rápido panorama das matérias e seus conteúdos tem uma alternativa adicional às funcionalidades já disponíveis no sistema oficial da universidade, o JúpiterWeb.
 		<br><br>
 		Em função das limitações de espaço e outros recursos pedagógicos, acreditamos ser a melhor prática que o interessado em frequentar as aulas consulte anteriormente o professor da respectiva turma.
 		</p>
@@ -25,8 +25,17 @@
 		    </div>
 		    <div style="width:100%;font-size:100%;display:table;box-sizing:border-box;margin:auto;border-color:gray;border-style:hidden;border-width:1px;color:#222">
 			<div style="display:table-cell;width:auto;text-align:center;padding:.35em .6em;background-color:gray"><img src="funnel.png" style="max-height:.8em;filter:invert(100%)"></div>
-			<div style="text-decoration:nderline;display:table-cell;width:50%;text-align:center;padding:.25em 0 .35em 0;border-style:hidden;border-width:1px;border-color:#888"><span id="togg_hr" style="cursor:pointer">Horários</span></div>
-			<div style="text-decoration:nderline;display:table-cell;width:50%;text-align:center;padding:.25em 3em .35em 0;border-style:hidden;border-width:1px;border-color:#888"><span id="togg_dep" style="cursor:pointer">Departamentos</span></div>
+			<div id="but_hr" style="text-decoration:nderline;display:table-cell;width:46%;text-align:center;padding:.25em 0 .35em 0;border-style:hidden;border-width:1px;border-color:#888">
+			    <span id="togg_hr" style="cursor:pointer">
+				Horários
+			    </span>
+			</div>
+			<div id="test_divisor" style="width:0px;height:80%;display:table-cell;border-width:1px;border-style:hidden solid hidden hidden;border-color:#bbb"></div>
+			<div id="but_dep" style="text-decoration:nderline;display:table-cell;width:50%;text-align:center;padding:.25em 0 .35em 0;border-style:hidden;border-width:1px;border-color:#888">
+			    <span id="togg_dep" style="cursor:pointer">
+				Departamentos
+			    </span>
+			</div>
 		    </div>
 		    <div id="ctrl_hr" style="margin:auto;display:none;padding:.5em 0 .9em 0;background-color:#f3f3f3;border-color:#d9d9d9;border-style:hidden;border-width:1px">
 			<table id="grade" style="margin:auto">

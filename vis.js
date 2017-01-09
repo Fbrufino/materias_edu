@@ -132,10 +132,14 @@ $(document).ready(function() {
     $('#togg_hr').on('click', function () {
 	if ($('#ctrl_hr').css('display')=='none' && $('#ctrl_dep').css('display')=='none') {
 	    $('#ctrl_hr').slideDown(200);
+	    $('#but_hr').addClass('shdw');
 	} else if ($('#ctrl_hr').css('display')!='none') {
 	    $('#ctrl_hr').slideUp(200);
+	    $('#but_hr').removeClass('shdw');
 	} else {
 	    $('#ctrl_dep').hide();
+	    $('#but_hr').addClass('shdw');
+	    $('#but_dep').removeClass('shdw');
 	    $('#ctrl_hr').show();
 	};
     });
@@ -143,10 +147,14 @@ $(document).ready(function() {
     $('#togg_dep').on('click', function () {
 	if ($('#ctrl_hr').css('display')=='none' && $('#ctrl_dep').css('display')=='none') {
 	    $('#ctrl_dep').slideDown(200);
+	    $('#but_dep').addClass('shdw');
 	} else if ($('#ctrl_dep').css('display')!='none') {
 	    $('#ctrl_dep').slideUp(200);
+	    $('#but_dep').removeClass('shdw');
 	} else {
 	    $('#ctrl_hr').hide();
+	    $('#but_dep').addClass('shdw');
+	    $('#but_hr').removeClass('shdw');
 	    $('#ctrl_dep').show();
 	};
     });
