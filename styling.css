@@ -1,6 +1,3 @@
-html{
-    background: #fafafa url('achtergrond75.jpg') no-repeat top center fixed
-}
 table.dataTable{
 	width:100%;
 	margin:0 auto;
@@ -365,9 +362,6 @@ table.dataTable,table.dataTable th,table.dataTable td{
 
 }
 
-body {
-    font-family: Calibri,Arial,Liberation Sans;
-}
 #grade th{
     font-size:80%
 }

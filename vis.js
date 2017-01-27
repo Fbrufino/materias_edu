@@ -1,16 +1,16 @@
-$.fn.dataTable.ext.search.push(
+jQuery.fn.dataTable.ext.search.push(
     function (settings,data,dataIndex) {
 	dias = ['seg','ter','qua','qui','sex','sab'];
 	periodos = [];
 	for (i in dias) {
-	    buff = $("#grade tr td:nth-child("+String(Number(i)+2)+").grade_chk").toArray();
+	    buff = jQuery("#grade tr td:nth-child("+String(Number(i)+2)+").grade_chk").toArray();
 	    for (b in buff) {
 		buff[b] = buff[b].innerHTML;
 	    }
 	    periodos.push(buff)
 
 	    if (data[6]==dias[i]) {
-		if ($.inArray(data[5],periodos[i])>-1) {
+		if (jQuery.inArray(data[5],periodos[i])>-1) {
 		    return true;
 		};
 	    };
@@ -18,9 +18,9 @@ $.fn.dataTable.ext.search.push(
 	return false;
     });
 
-$.fn.dataTable.ext.search.push(
+jQuery.fn.dataTable.ext.search.push(
     function (settings,data,dataIndex) {
-	var term = new RegExp($('#buscatps')[0].value,'i');
+	var term = new RegExp(jQuery('#buscatps')[0].value,'i');
 	if ((term.test(data[2])) || (term.test(data[1])) || (term.test(data[7]))) {
 	    return true;
 	}
@@ -44,8 +44,8 @@ function format ( d ) {
     '</table>';
 }
 
-$(document).ready(function() {
-    var table = $('#example').DataTable( {
+jQuery(document).ready(function() {
+    var table = jQuery('#example').DataTable( {
 	paging: false,
 	data: lista,
 	"dom" : 'lrtip',
@@ -64,8 +64,8 @@ $(document).ready(function() {
 	]
     } );
 
-    $('#example tbody').on('click', 'tr.odd td, tr.even td', function () {
-	var tr = $(this).closest('tr');
+    jQuery('#example tbody').on('click', 'tr.odd td, tr.even td', function () {
+	var tr = jQuery(this).closest('tr');
 	var row = table.row( tr );
  
 	if ( row.child.isShown() ) {
@@ -80,82 +80,82 @@ $(document).ready(function() {
 	}
     } );
     
-    $('#ctrl_dep').on('change', 'input', function () {
+    jQuery('#ctrl_dep').on('change', 'input', function () {
 	var arr = new Array;
-	var inps = $('#ctrl_dep input');
+	var inps = jQuery('#ctrl_dep input');
 	for (n in inps) {
 	    if (inps[n].checked==true) {
 		arr.push("("+inps[n].value+")");
 	    };
 	};
 	if (arr.length==0) {
-	    arr = ["^$"];
+	    arr = ["^jQuery"];
 	}
 	table.column(0).search(arr.join("|"),true);
 	table.draw();
 	});
 
-    $('#grade td.grade_chk').on('click', function () {
-	$(this).toggleClass('grade_chk');
-	$(this).toggleClass('grade_unchk');
+    jQuery('#grade td.grade_chk').on('click', function () {
+	jQuery(this).toggleClass('grade_chk');
+	jQuery(this).toggleClass('grade_unchk');
 	table.draw();
     });
 
-    $('span.grade_col').on('click', function () {
-	var num = 7 - $(this).closest('th').nextAll().size();
-	if ($('#grade td:nth-child('+String(num)+').grade_chk').size()>1) {
-	    $('#grade td:nth-child('+String(num)+').grade_chk').addClass('grade_unchk');
-	    $('#grade td:nth-child('+String(num)+').grade_chk').removeClass('grade_chk');
+    jQuery('span.grade_col').on('click', function () {
+	var num = 7 - jQuery(this).closest('th').nextAll().size();
+	if (jQuery('#grade td:nth-child('+String(num)+').grade_chk').size()>1) {
+	    jQuery('#grade td:nth-child('+String(num)+').grade_chk').addClass('grade_unchk');
+	    jQuery('#grade td:nth-child('+String(num)+').grade_chk').removeClass('grade_chk');
 	} else {
-	    $('#grade td:nth-child('+String(num)+').grade_unchk').addClass('grade_chk');
-	    $('#grade td:nth-child('+String(num)+').grade_unchk').removeClass('grade_unchk');
+	    jQuery('#grade td:nth-child('+String(num)+').grade_unchk').addClass('grade_chk');
+	    jQuery('#grade td:nth-child('+String(num)+').grade_unchk').removeClass('grade_unchk');
 	}
 	table.draw();
     });
 
-    $('td.grade_lin').on('click', function () {
+    jQuery('td.grade_lin').on('click', function () {
 	var that = this;
-	if ($(that).nextAll('.grade_chk').size()>3) {
-	    $(that).nextAll('.grade_chk').addClass('grade_unchk');
-	    $(that).nextAll('.grade_chk').removeClass('grade_chk');
+	if (jQuery(that).nextAll('.grade_chk').size()>3) {
+	    jQuery(that).nextAll('.grade_chk').addClass('grade_unchk');
+	    jQuery(that).nextAll('.grade_chk').removeClass('grade_chk');
 	} else {
-	    $(that).nextAll('.grade_unchk').addClass('grade_chk');
-	    $(that).nextAll('.grade_unchk').removeClass('grade_unchk');
+	    jQuery(that).nextAll('.grade_unchk').addClass('grade_chk');
+	    jQuery(that).nextAll('.grade_unchk').removeClass('grade_unchk');
 	};
 	table.draw();
     });
 
-    $('#buscatps').on('keyup change', function () {
+    jQuery('#buscatps').on('keyup change', function () {
 	table.draw();
     });
     
-    $('#togg_hr').on('click', function () {
-	if ($('#ctrl_hr').css('display')=='none' && $('#ctrl_dep').css('display')=='none') {
-	    $('#ctrl_hr').slideDown(200);
-	    $('#but_hr').addClass('shdw');
-	} else if ($('#ctrl_hr').css('display')!='none') {
-	    $('#ctrl_hr').slideUp(200);
-	    $('#but_hr').removeClass('shdw');
+    jQuery('#togg_hr').on('click', function () {
+	if (jQuery('#ctrl_hr').css('display')=='none' && jQuery('#ctrl_dep').css('display')=='none') {
+	    jQuery('#ctrl_hr').slideDown(200);
+	    jQuery('#but_hr').addClass('shdw');
+	} else if (jQuery('#ctrl_hr').css('display')!='none') {
+	    jQuery('#ctrl_hr').slideUp(200);
+	    jQuery('#but_hr').removeClass('shdw');
 	} else {
-	    $('#ctrl_dep').hide();
-	    $('#but_hr').addClass('shdw');
-	    $('#but_dep').removeClass('shdw');
-	    $('#ctrl_hr').show();
+	    jQuery('#ctrl_dep').hide();
+	    jQuery('#but_hr').addClass('shdw');
+	    jQuery('#but_dep').removeClass('shdw');
+	    jQuery('#ctrl_hr').show();
 	};
     });
     
-    $('#togg_dep').on('click', function () {
-	if ($('#ctrl_hr').css('display')=='none' && $('#ctrl_dep').css('display')=='none') {
-	    $('#ctrl_dep').slideDown(200);
-	    $('#but_dep').addClass('shdw');
-	} else if ($('#ctrl_dep').css('display')!='none') {
-	    $('#ctrl_dep').slideUp(200);
-	    $('#but_dep').removeClass('shdw');
+    jQuery('#togg_dep').on('click', function () {
+	if (jQuery('#ctrl_hr').css('display')=='none' && jQuery('#ctrl_dep').css('display')=='none') {
+	    jQuery('#ctrl_dep').slideDown(200);
+	    jQuery('#but_dep').addClass('shdw');
+	} else if (jQuery('#ctrl_dep').css('display')!='none') {
+	    jQuery('#ctrl_dep').slideUp(200);
+	    jQuery('#but_dep').removeClass('shdw');
 	} else {
-	    $('#ctrl_hr').hide();
-	    $('#but_dep').addClass('shdw');
-	    $('#but_hr').removeClass('shdw');
-	    $('#ctrl_dep').show();
+	    jQuery('#ctrl_hr').hide();
+	    jQuery('#but_dep').addClass('shdw');
+	    jQuery('#but_hr').removeClass('shdw');
+	    jQuery('#ctrl_dep').show();
 	};
     });
 } );

@@ -1,7 +1,8 @@
 # General
 
 *.swp
+*.swo
 
-# Local untracked folders in Fbrufino's local repository
+# Local untracked folder
 
-teste/
+untracked/
