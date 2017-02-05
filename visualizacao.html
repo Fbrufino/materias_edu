@@ -1,8 +1,11 @@
 <!DOCTYPE html>
+
+
+<!-- Cabeçalho: é substituído pelo cabeçalho do Econoeduc no transplante para o Wordpress -->
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Guia de Aulas sobre Educação na USP</title>
+	<title>Mapa Acadêmico</title>
         <link href="styling.css" rel="stylesheet" type="text/css">
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
@@ -12,8 +15,10 @@
     </head>
     <body>
 	<div id="guia_wrapper" style="max-width:800px;margin:auto">
-	    <h1 style="text-align:center">Guia de Aulas sobre Educação na USP<span style="font-size:30%">[beta]</span></h1>
-	    <h2 style="text-align:center">1º Semestre, 2017</h2>
+	    <h1 style="text-align:center">Mapa Acadêmico<span style="font-size:30%">[beta]</span></h1>
+
+
+<!-- Conteúdo: incluído na aba texto do editor do Wordpress -->
 	    <p style="text-align:center;margin-top:4em;margin-bottom:2em;font-size:110%">
 		Na Universidade de São Paulo, é possível acompanhar disciplinas ofertadas em seus campi como ouvinte. Na intenção de aproximar essa oportunidade e os interessados em Educação e temas afins, reorganizamos aqui dados publicados pela própria universidade. Nesta página, alunos que tenham uma vaga em sua grade horária ou não-alunos que se interessem pelas aulas podem não só acessar a relação de turmas, mas filtrá-las por horário, professor, etc.
 		<br><br>
@@ -29,21 +34,23 @@
 		    <li>As aulas começam no dia 6 de março e vão no máximo até o dia 8 de julho, como consta no <a href="https://uspdigital.usp.br/jupiterweb/jupCalendario2017_final.jsp?codmnu=7920">Calendário USP 2017</a>.</li>
 		</ul>
 	    </div>
-	    <div id="controls_wrapper">
+	    <h2 style="text-align:center">1º Semestre, 2017</h2>
 	    <div id="controls">
 		<div style="width:100%;max-width:600px;margin:auto;background-color:#d9d9d9;padding:1px">
 		    <div style="width:100%">
 			<input type="text" id="buscatps" placeholder="Buscar nome, código ou professor da matéria" style="width:100%;padding:.3em .5em;border-color:#d9d9d9;border-style:solid;border-width:1px;box-sizing:border-box">
 		    </div>
 		    <div style="width:100%;font-size:100%;display:table;box-sizing:border-box;margin:auto;border-color:gray;border-style:hidden;border-width:1px;color:#222">
-			<div style="display:table-cell;width:auto;text-align:center;padding:.35em .6em;background-color:gray"><img src="funnel.png" style="max-height:.8em;filter:invert(100%)"></div>
-			<div id="but_hr" style="text-decoration:nderline;display:table-cell;width:46%;text-align:center;padding:.25em 0 .35em 0;border-style:hidden;border-width:1px;border-color:#888">
+			<div style="display:table-cell;width:auto;text-align:center;padding:.35em .6em;background-color:gray;vertical-align:middle">
+			    <img src="funnel.png" style="display:table-cell;max-height:.8em;max-width:none;filter:invert(100%);vertical-align:middle">
+			</div>
+			<div id="but_hr" style="text-decoration:nderline;display:table-cell;width:46%;text-align:center;padding:.25em 0 .25em 0;border-style:hidden;border-width:1px;border-color:#888;vertical-align:middle">
 			    <span id="togg_hr" style="cursor:pointer">
 				Horários
 			    </span>
 			</div>
 			<div id="test_divisor" style="width:0px;height:80%;display:table-cell;border-width:1px;border-style:hidden solid hidden hidden;border-color:#bbb"></div>
-			<div id="but_dep" style="text-decoration:nderline;display:table-cell;width:50%;text-align:center;padding:.25em 0 .35em 0;border-style:hidden;border-width:1px;border-color:#888">
+			<div id="but_dep" style="text-decoration:nderline;display:table-cell;width:50%;text-align:center;padding:.25em 0 .25em 0;border-style:hidden;border-width:1px;border-color:#888;vertical-align:middle">
 			    <span id="togg_dep" style="cursor:pointer">
 				Departamentos
 			    </span>
@@ -74,7 +81,6 @@
 			</table>
 		    </div>
 		</div>
-	    </div>
 	    <br>
 	    <table id="example" class="display" cellspacing="0" width="100%" style="margin-top:1em">
 		<thead>
@@ -87,6 +93,7 @@
 		</thead>
 	    </table>
 	</div>
+<!-- Incluir só até aqui -->
 	</div>
     </body>
 </html>
