@@ -19,41 +19,34 @@
 
 
 <!-- Conteúdo: incluído na aba texto do editor do Wordpress -->
-	    <p style="text-align:center;margin-top:4em;margin-bottom:2em;font-size:110%">
-		Na Universidade de São Paulo, é possível acompanhar disciplinas ofertadas em seus campi como ouvinte. Na intenção de aproximar essa oportunidade e os interessados em Educação e temas afins, reorganizamos aqui dados publicados pela própria universidade. Nesta página, alunos que tenham uma vaga em sua grade horária ou não-alunos que se interessem pelas aulas podem não só acessar a relação de turmas, mas filtrá-las por horário, professor, etc.
-		<br><br>
-		Aos que não têm disponibilidade de frequentar as aulas pessoalmente, a lista pode ainda servir como panorama do campo e atalho para as páginas das disciplinas no sistema da universidade, que trazem indicações da literatura relevante em seus tópicos.
-		<br><br>
-		No momento, a ferramenta ainda está em desenvolvimento, e dispõe apenas das turmas de Pedagogia e licenciaturas sob responsabilidade da Faculdade de Educação (Campus Butantã), mas o objetivo é abranger todas as unidades da capital paulista.
-	    </p>
+	    <span style="font-size:85%">Por Fernando Rufino e João Carabetta</span>
+	    <p class="ntex" style="margin-top:4em">
+		Disponibilizamos aqui uma relação de disciplinas universitárias sobre Educação e temas afins que o interessado pode acompanhar como ouvinte, uma vez que tenha a permissão do professor e da faculdade. Nesta página, é possível não só ver a lista de turmas, mas filtrá-la por horário, professor e outros campos.</p><p class="ntex">No momento temos apenas informações da Faculdade de Educação da USP, e indicações de turmas que ofereçam vagas para ouvintes e sejam de faculdades da cidade de São Paulo serão mais que bem-vindas! Indicações, críticas, dúvidas ou sugestões são recebidas <a href="https://groups.google.com/d/forum/mapa_academico">neste link</a> ou no e-mail <span style="font-style:italic;font-size:90%">mapa_academico@googlegroups.com</span>.
+	    </p><p class="ntex" style="margin-top:3em;font-size:100%;margin-bottom:2em">Você tem uma ferramenta interativa sobre Educação que gostaria de divulgar no site ou desenvolver com o grupo? <a href="http://econoeduc.com.br/entre-em-contato/">Entre em contato</a>!</p>
 	    <div style="text-align:left;margin-top:3em;margin-bottom:4em;font-size:95%">
 		Orientações:
 		<ul>
-		    <li>O interessado em frequentar as aulas deve consultar anteriormente o professor da respectiva turma. Caso decida fazê-lo por e-mail, os endereços podem ser encontrados na <a href="http://www4.fe.usp.br/acesso-rapido4/docentes">página da faculdade</a>;</li>
+		    <li>É necessário consultar anteriormente o professor da respectiva turma. Caso decida fazê-lo por e-mail, os endereços podem ser encontrados na <a href="http://www4.fe.usp.br/acesso-rapido4/docentes">página da faculdade</a>;</li>
 		    <li>As relações com as salas de cada turma costumam ser expostas em murais nos prédios das respectivas unidades a partir do início das aulas;</li>
 		    <li>As aulas começam no dia 6 de março e vão no máximo até o dia 8 de julho, como consta no <a href="https://uspdigital.usp.br/jupiterweb/jupCalendario2017_final.jsp?codmnu=7920">Calendário USP 2017</a>.</li>
 		</ul>
 	    </div>
-	    <h2 style="text-align:center">1º Semestre, 2017</h2>
 	    <div id="controls">
+<h3 style="text-align:center">1º Semestre, 2017</h2>
 		<div style="width:100%;max-width:600px;margin:auto;background-color:#d9d9d9;padding:1px">
 		    <div style="width:100%">
 			<input type="text" id="buscatps" placeholder="Buscar nome, código ou professor da matéria" style="width:100%;padding:.3em .5em;border-color:#d9d9d9;border-style:solid;border-width:1px;box-sizing:border-box">
 		    </div>
 		    <div style="width:100%;font-size:100%;display:table;box-sizing:border-box;margin:auto;border-color:gray;border-style:hidden;border-width:1px;color:#222">
 			<div style="display:table-cell;width:auto;text-align:center;padding:.35em .6em;background-color:gray;vertical-align:middle">
-			    <img src="funnel.png" style="display:table-cell;max-height:.8em;max-width:none;filter:invert(100%);vertical-align:middle">
+			    <img src="http://econoeduc.com.br/wp-content/themes/baskerville/teste_acamap/funnel.png" style="max-height:.8em;filter:invert(100%);display:table-cell;max-width:none;vertical-align:middle">
 			</div>
-			<div id="but_hr" style="text-decoration:nderline;display:table-cell;width:46%;text-align:center;padding:.25em 0 .25em 0;border-style:hidden;border-width:1px;border-color:#888;vertical-align:middle">
-			    <span id="togg_hr" style="cursor:pointer">
-				Horários
-			    </span>
+			<div id="but_hr" style="text-decoration:nderline;display:table-cell;width:46%;text-align:center;padding:.25em 0 .35em 0;border-style:hidden;border-width:1px;border-color:#888;vertical-align:middle">
+			    <span id="togg_hr" style="cursor:pointer">Horários</span>
 			</div>
 			<div id="test_divisor" style="width:0px;height:80%;display:table-cell;border-width:1px;border-style:hidden solid hidden hidden;border-color:#bbb"></div>
-			<div id="but_dep" style="text-decoration:nderline;display:table-cell;width:50%;text-align:center;padding:.25em 0 .25em 0;border-style:hidden;border-width:1px;border-color:#888;vertical-align:middle">
-			    <span id="togg_dep" style="cursor:pointer">
-				Departamentos
-			    </span>
+			<div id="but_dep" style="text-decoration:nderline;display:table-cell;width:50%;text-align:center;padding:.25em 0 .35em 0;border-style:hidden;border-width:1px;border-color:#888;vertical-align:middle">
+			    <span id="togg_dep" style="cursor:pointer">Departamentos</span>
 			</div>
 		    </div>
 		    <div id="ctrl_hr" style="margin:auto;display:none;padding:.5em 0 .9em 0;background-color:#f3f3f3;border-color:#d9d9d9;border-style:hidden;border-width:1px">

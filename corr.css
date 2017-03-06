@@ -1,3 +1,57 @@
-#example table tbody > tr:nth-child(odd) > td {
-    background: inherit
+#example table tbody > tr td {
+    background: inherit;
 }
+.post-content table tbody > tr:nth-child(odd) > td {
+    background: inherit;
+}
+.post-content table {
+    font-size: 100%;
+}
+.post-content th,
+.post-content td {
+    border-bottom: 0 solid #DDD;
+}
+.post-content ul, .post-content p, .post-content li {
+    line-height: normal;
+}
+h1 {
+    text-align: center;
+}
+.post .post-header:before, .post .post-header:after {
+    content: none;
+}
+#grade {
+    border-collapse: separate;
+    border-spacing: 2px;
+    text-align: center;
+    width: auto;
+}
+#grade th{
+        text-align: center;
+        padding: .25em;
+}
+#grade td{
+        text-align: center;
+        padding: .25em;
+}
+#ctrl_dep td {
+    padding: initial;
+}
+#ctrl_dep table {
+    width: auto;
+}
+#example th {
+    text-align: center;
+}
+div.post-header {
+    padding-bottom: 3%
+}
+div.post-content {
+    padding-top: 1%!important
+}
+.post-content thead {
+    white-space: normal;
+}
+.post-content th {
+    white-space: normal;
+    vertical-align: middle;

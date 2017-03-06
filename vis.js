@@ -28,7 +28,7 @@ jQuery.fn.dataTable.ext.search.push(
     });
 
 function format ( d ) {
-    return '<table cellpadding="5" cellspacing="0" border="0" class="sub" style="padding-right:7.5%;padding-left:7.5%;font-size:80%">'+
+    return '<table cellpadding="5" cellspacing="0" border="0" class="sub" style="width:85%;margin:auto;font-size:80%">'+
 	'<tr>'+
 	    '<td colspan="3" style="text-align:center"><b>Departamento de '+d.departamento+'</b></td>'+
 	'</tr>'+
@@ -39,7 +39,7 @@ function format ( d ) {
 	'</tr>'+
 	'<tr>'+
 	    '<td colspan="3"><p style="text-align:center"><b>Sinopse da matéria</b></p>'+
-	    '<p style="padding-left:15%;padding-right:15%;text-align:justify">'+d.desc+'<br><br><span style="font-size:70%"><a href="'+d.link+'">Ver mais no Júpiter</a></span></p></td>'+
+	    '<p style="padding-left:15%;padding-right:15%;text-align:justify">'+d.desc+'<br><br><span style="font-size:80%"><a href="'+d.link+'">Ver mais no Júpiter</a></span></p></td>'+
 	'</tr>'+
     '</table>';
 }
